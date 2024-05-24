@@ -1,0 +1,9 @@
+package kosa.mission;
+
+public class Mission07 {
+	public static void main(String[] args) {
+			
+		int rand = (int)(Math.random()*9)+1;
+		System.out.println(rand);
+	}
+}

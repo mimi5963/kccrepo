@@ -1,0 +1,19 @@
+package kosa.realSoft;
+
+import java.util.List;
+
+public class BankStatementProcessor {
+	private final List<BankTransaction> bankList;
+	
+	public BankStatementProcessor(final List<BankTransaction> bankList) {
+		this.bankList = bankList;
+	}
+	
+	public double calculate() {
+		double total =0;
+		for(final BankTransaction bank : this.bankList) {
+			total += bank.getAmount();
+		}
+		return total;
+	}
+}

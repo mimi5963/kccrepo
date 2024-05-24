@@ -1,0 +1,55 @@
+package kosa.realSoft;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
+
+public class BankTransactionAnalyzerSimple {
+	 private static final String RESOURCES ="src/main/resources/";
+	 
+	 //KISS 원칙이 적용되었다함? 
+	 //명령줄 인수로 csv 파일을 전달받음 
+	 public static void main(final String...args) throws IOException {
+		 
+		 //Path 클래스는 파일 시스템 경로를 가리킴 
+//		 final Path path = Paths.get(RESOURCES + args[0]);
+//		 final List<String> lines = Files.readAllLines(path);
+//		 double total = 0d;
+//		 for(final String line: lines) {
+//			 final String[] columns = line.split(",");
+//			 final double amount = Double.parseDouble(columns[1]);
+//			 total += amount;
+//		 }
+//		 
+//		 System.out.println("The total for all transcation is "+total);
+//		 
+		 
+		 
+		 
+		 //특정 월의 값 total값 알고 싶어
+		 final Path path = Paths.get(RESOURCES + args[0]);
+		 final List<String> lines = Files.readAllLines(path);
+		 double total = 0d;
+		 final DateTimeFormatter DATE_PATTERN = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+		 
+		 for(final String line: lines) {
+			 final String[] columns = line.split(",");
+			 final LocalDate date = LocalDate.parse(columns[0],DATE_PATTERN);
+			 if(date.getMonth() == Month.JANUARY) {
+			 final double amount = Double.parseDouble(columns[1]);
+			 total += amount;
+			 }
+		 }
+		 
+		 System.out.println("The total for all transcation is "+total);
+		 
+		 
+		 
+		 
+	}
+}

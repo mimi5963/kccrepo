@@ -1,0 +1,9 @@
+package kosa.realSoft;
+
+import java.util.List;
+
+public class BankStatementProcessor {
+	private final List<BankTransaction> bankList;
+	
+	public BankStatementProcessor(final)
+}

@@ -1,0 +1,58 @@
+package kosa.realSoft;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
+
+public class BankTransactionAnalyzerSimple {
+	private static final String RESOURCES = "src/main/resources/";
+	final BankStatementCSVParser baCsvParser = new BankStatementCSVParser();
+
+	
+	public static void main(final String... args) throws IOException {
+
+		
+
+		final String fileName = args[0];
+		final Path path = Paths.get(RESOURCES + fileName);
+		final List<String> lines = Files.readAllLines(path);
+
+		final List<BankTransaction> bankTransactions = baCsvParser.parseLineFromCSV(lines);
+
+		System.out.println(calculateTotalAmount(bankTransactions));
+		System.out.println(selectInMonth(bankTransactions, Month.JANUARY));
+		;
+
+		final DateTimeFormatter DATE_PATTERN = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+
+	}
+
+	private static List<BankTransaction> selectInMonth(List<BankTransaction> bankTransactions, Month month) {
+		final List<BankTransaction> bankTransactionInMonth = new ArrayList<>();
+		for (final BankTransaction bank : bankTransactions) {
+			if (bank.getDate().getMonth() == month) {
+				bankTransactionInMonth.add(bank);
+			}
+		}
+
+		return bankTransactionInMonth;
+	}
+
+	private static double calculateTotalAmount(List<BankTransaction> bankTransactions) {
+
+		double total = 0d;
+		for (final BankTransaction bank : bankTransactions) {
+			total += bank.getAmount();
+		}
+		return total;
+
+	}
+	
+	
+}
