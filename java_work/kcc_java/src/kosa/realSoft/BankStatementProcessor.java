@@ -1,6 +1,7 @@
 package kosa.realSoft;
 
 import java.time.Month;
+import java.util.ArrayList;
 import java.util.List;
 
 public class BankStatementProcessor {
@@ -37,5 +38,27 @@ public class BankStatementProcessor {
 		}
 		return total;
 	}
-	
+
+	public List<BankTransaction> findTransactionsGreaterThanEqual(final int amount){
+		final List<BankTransaction> result = new ArrayList<>();
+		for(final BankTransaction bank : bankList){
+			if(bank.getAmount() >= amount){
+				result.add(bank);
+			}
+		}
+		return result;
+	}
+
+	//메서드 하나로 퉁치기 가능
+	public List<BankTransaction> findTransactions(final  BankTransactionFilter bankTransactionFilter){
+		final List<BankTransaction> result = new ArrayList<>();
+		for(final BankTransaction bank : bankList){
+			if(bankTransactionFilter.test(bank)){
+				result.add(bank);
+			}
+		}
+		return result;
+	}
+
+
 }
