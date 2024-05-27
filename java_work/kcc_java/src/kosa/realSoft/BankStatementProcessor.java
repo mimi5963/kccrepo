@@ -49,16 +49,16 @@ public class BankStatementProcessor {
 		return result;
 	}
 
-	//메서드 하나로 퉁치기 가능
-	public List<BankTransaction> findTransactions(final  BankTransactionFilter bankTransactionFilter){
-		final List<BankTransaction> result = new ArrayList<>();
-		for(final BankTransaction bank : bankList){
-			if(bankTransactionFilter.test(bank)){
-				result.add(bank);
-			}
-		}
-		return result;
-	}
-
-
+//	//硫붿꽌�뱶 �븯�굹濡� �뎮移섍린 媛��뒫
+//	public List<BankTransaction> findTransactions(final  BankTransactionFilter bankTransactionFilter){
+//		final List<BankTransaction> result = new ArrayList<>();
+//		for(final BankTransaction bank : bankList){
+//			if(bankTransactionFilter.test(bank)){
+//				result.add(bank);
+//			}
+//		}
+//		return result;
+//	}
 }
+
+
