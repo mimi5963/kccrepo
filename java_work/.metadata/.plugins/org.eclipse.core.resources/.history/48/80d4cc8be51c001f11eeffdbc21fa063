@@ -1,0 +1,24 @@
+package Mission_NumberBook;
+
+public class UserView {
+	
+	private String[] menuList;
+	private int curIdx;
+	private int maxIdx;
+	
+	public UserView(int maxLen) {
+		
+	}
+	
+	public void printMenu() {
+		for(int i=1; i<=curIdx;i++) {
+		System.out.println(i+". "+menuList[i]);
+		}
+	}
+	
+	public void printInputError(String cause) {
+			
+	}
+	
+	
+}

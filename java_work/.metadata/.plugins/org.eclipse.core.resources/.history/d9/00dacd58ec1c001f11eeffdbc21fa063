@@ -1,0 +1,29 @@
+package Mission_NumberBook;
+
+public class SwitchUserInput {
+	
+	private Manager manager; 
+	private UserView uv;
+	public SwitchUserInput(Manager manager,UserView uv) {
+		this.manager = manager;
+		this.uv = uv;
+	}
+	
+	public boolean switchingInput(String menu) {
+		
+		//1을 누르면 1에 해당하는 기능 수행 입력 변환기가 필요해 
+		int menuCnt = Integer.parseInt(menu);
+		uv.printMenu();
+		switch(menuCnt) {
+			
+		case 1: System.out.println("메뉴 1");
+				uv.createUserView(sc);
+		
+		
+		}
+		
+		
+		
+		return true;
+	}
+}

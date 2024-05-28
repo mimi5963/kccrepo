@@ -1,0 +1,5 @@
+package Mission_NumberBook;
+
+public interface FindPolicy {
+	PhoneInfo findPhoneInfo(PhoneInfo[] phoneInfoList,int cursize);
+}

@@ -1,0 +1,11 @@
+package Mission_NumberBook;
+
+public class NameFindPolicy implements FindPolicy{
+
+	@Override
+	public PhoneInfo findPhoneInfo(PhoneInfo[] phoneInfoList, int cursize) {
+		
+		return null;
+	}
+
+}

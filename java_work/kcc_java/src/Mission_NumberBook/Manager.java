@@ -1,54 +1,87 @@
 package Mission_NumberBook;
 
-import java.util.Optional;
+
 
 public class Manager {
-	//비즈니스 로직
-	private PhoneInfo[] phoneInfos;
+	
+	private PhoneInfo[] phoneInfoArray;
 	private int curBookSize;
 	private int maxBookSize;
-	//기본 10개 생성
+	private FindPolicy findPolicy;
+	
+	
+	/*
+	 * 사용자가 따로 입력하지않는다면, 10개의 size로 배열을 생성한다.
+	 * */
 	public Manager() {
 		this(10);
 	}
-	//사용자가 정할 수 있음
+	
+	
+	/*
+	 * 사용자가 배열의 크기를 정할 수 있다.
+	 * */
 	public Manager(int size) {
-		phoneInfos = new PhoneInfo[size];
+		phoneInfoArray = new PhoneInfo[size];
 		curBookSize=0;
 		maxBookSize=size;
 	}
 	
-	//추가가 안된다면 이유를 알아야해서 boolean
+	/*
+	 * 사용자를 추가한다.
+	 * 등록할 수 있는 사용자의 수는 정해져있다. 따라서, 범위를 넘어가는 사용자는 등록할 수 없다.
+	 * 
+	 * */
 	public boolean addPhoneInfo(PhoneInfo phoneInfo) {
 		if(maxBookSize <= curBookSize) {
 			return false;
 		}else {
 			
-			phoneInfos[curBookSize++] = phoneInfo;
+			phoneInfoArray[curBookSize++] = phoneInfo;
 		}
 		return true;
 	}
 	
-	//출력이 안된다면 이유를 알아야해서 boolean
+	/*
+	 * 
+	 * 전체 사용자를 출력한다. 
+	 * 만약 등록된 사용자가 없으면 출력할 수 없음으로 false 리턴한다.
+	 * 
+	 * */
 	public boolean listPhoneInfo() {
 		if(curBookSize == 0) {
 			return false;
 		}
 		
 		for (int i = 0; i < curBookSize; i++) {
-			phoneInfos[i].printPhoneInfo();
+			phoneInfoArray[i].printPhoneInfo();
 		}
 		
 		return true;
 	}
 	
-	//찾을 수 없다 있다 알려줘야함
-	public PhoneInfo searchPhoneInfo(String phoneNumebr) {
-		
-		
-		
-		return null;
+	/*
+	 * 등록된 기준에 맞게 사용자를 찾는다. 
+	 * */
+	public PhoneInfo searchPhoneInfo(String target) {
+		return findPolicy.findPhoneInfo(phoneInfoArray, curBookSize, target);
 	}
 	
+	
+	/*
+	 * 기준을 사용자로부터 입력받는다.
+	 * */
+	public boolean setFindPolicy(int num) {
+		
+		switch(num) {
+		case 1: findPolicy = NameFindPolicy.getInstance();
+				break;
+		case 2: findPolicy = PhoneNumberFindPolicy.getInstance();
+				break;
+		default: return false;
+		}
+		
+		return true;
+	}
 	
 }

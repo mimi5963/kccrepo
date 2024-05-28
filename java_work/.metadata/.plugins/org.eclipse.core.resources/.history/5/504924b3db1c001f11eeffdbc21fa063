@@ -1,0 +1,12 @@
+package Mission_NumberBook;
+
+public class NameFindPolicy extends FindPolicy{
+
+
+	@Override
+	public boolean compare(PhoneInfo phoneInfo, String target) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

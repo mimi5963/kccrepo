@@ -1,0 +1,68 @@
+package Mission_NumberBook;
+
+import java.util.Optional;
+
+public class Manager {
+	//비즈니스 로직
+	private PhoneInfo[] phoneInfoArray;
+	private int curBookSize;
+	private int maxBookSize;
+	private FindPolicy findPolicy;
+	
+	
+	//기본 10개 생성
+	public Manager() {
+		this(10);
+	}
+	//사용자가 정할 수 있음
+	public Manager(int size) {
+		phoneInfoArray = new PhoneInfo[size];
+		curBookSize=0;
+		maxBookSize=size;
+	}
+	
+	//추가가 안된다면 이유를 알아야해서 boolean
+	public boolean addPhoneInfo(PhoneInfo phoneInfo) {
+		if(maxBookSize <= curBookSize) {
+			return false;
+		}else {
+			
+			phoneInfoArray[curBookSize++] = phoneInfo;
+		}
+		return true;
+	}
+	
+	//출력이 안된다면 이유를 알아야해서 boolean
+	public boolean listPhoneInfo() {
+		if(curBookSize == 0) {
+			return false;
+		}
+		
+		for (int i = 0; i < curBookSize; i++) {
+			phoneInfoArray[i].printPhoneInfo();
+		}
+		
+		return true;
+	}
+	
+	//찾을 수 없다 있다 알려줘야함
+	public PhoneInfo searchPhoneInfo(String target) {
+		return findPolicy.findPhoneInfo(phoneInfoArray, curBookSize, target);
+	}
+	
+	
+	
+	public boolean setFindPolicy(int num) {
+		
+		switch(num) {
+		case 1: findPolicy = NameFindPolicy.getInstance();
+				break;
+		case 2: findPolicy = PhoneNumberFindPolicy.getInstance();
+				break;
+		default: return false;
+		}
+		
+		return true;
+	}
+	
+}
