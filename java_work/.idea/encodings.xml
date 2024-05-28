@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/kcc_java/src/Mission_NumberBook/Manager.java" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/kcc_java/src/Mission_NumberBook/PhoneBookMain.java" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/kcc_java/src/Mission_NumberBook/PhoneInfo.java" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/kcc_java/src/Mission_NumberBook/UserFormView.java" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/kcc_java/src/Mission_NumberBook/findPolicy/FindPolicy.java" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/kcc_java/src/Mission_NumberBook/findPolicy/FindPolicy.java" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/kcc_java/src/Mission_NumberBook/findPolicy/NameFindPolicy.java" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/kcc_java/src/Mission_NumberBook/findPolicy/NameFindPolicy.java" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/kcc_java/src/Mission_NumberBook/findPolicy/PhoneNumberFindPolicy.java" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/kcc_java/src/Mission_NumberBook/findPolicy/PhoneNumberFindPolicy.java" charset="x-windows-949" />
     <file url="file://$PROJECT_DIR$/kcc_java/src/kosa/mission/ArrayMission.java" charset="x-windows-949" />
   </component>
 </project>

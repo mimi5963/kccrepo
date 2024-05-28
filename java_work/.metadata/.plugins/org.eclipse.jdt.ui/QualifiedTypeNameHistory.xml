@@ -40,10 +40,10 @@
     <fullyQualifiedTypeName name="kcc.oop.BookCacher"/>
     <fullyQualifiedTypeName name="java.time.format.DateTimeFormatterBuilder"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
-    <fullyQualifiedTypeName name="Mission_NumberBook.FindPolicy"/>
+    <fullyQualifiedTypeName name="Mission_NumberBook.findPolicy.FindPolicy"/>
     <fullyQualifiedTypeName name="Mission_NumberBook.Manager"/>
-    <fullyQualifiedTypeName name="Mission_NumberBook.NameFindPolicy"/>
-    <fullyQualifiedTypeName name="Mission_NumberBook.PhoneNumberFindPolicy"/>
+    <fullyQualifiedTypeName name="Mission_NumberBook.findPolicy.NameFindPolicy"/>
+    <fullyQualifiedTypeName name="Mission_NumberBook.findPolicy.PhoneNumberFindPolicy"/>
     <fullyQualifiedTypeName name="javax.xml.crypto.Data"/>
     <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
