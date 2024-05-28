@@ -1,0 +1,32 @@
+package kcc.oop;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BookCacher {
+	private DiscountPolicy discountPolicy;
+	private List<Book> bookList;
+	
+	public BookCacher(DiscountPolicy discountPolicy) {
+		this.discountPolicy = discountPolicy;
+		this.bookList = new ArrayList<Book>();
+	}
+	public int getTotalPrice() {
+		int total =0;
+		for(Book book : bookList) {
+			total += book.getPrice() - getDiscountPrice(book);
+		}
+		return total;
+	}
+	
+	public int getDiscountPrice(Book book) {
+		return discountPolicy.discount(book);
+	}
+	
+	public void addBookOf(Book...books) {
+		for(int i=0; i<books.length;i++) {
+			bookList.add(books[i]);
+		}
+	}
+}
