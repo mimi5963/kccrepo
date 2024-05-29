@@ -1,0 +1,21 @@
+package kcc.board;
+
+public class Board {
+	private static int boardNum = 0;
+	private String userName;
+	private String content;
+	
+	public Board() {}
+	
+	public Board(String userName, String content) {
+		this.boardNum++;
+		this.userName = userName;
+		this.content = content;
+	}
+	
+	public void printBoard() {
+		System.out.println("글 번호 :"+boardNum);
+		System.out.println("작성자 이름 :"+userName);
+		System.out.println("글 내용 : "+content);
+	}
+}

@@ -1,0 +1,5 @@
+package kosa.relation;
+
+public class Student {
+
+}

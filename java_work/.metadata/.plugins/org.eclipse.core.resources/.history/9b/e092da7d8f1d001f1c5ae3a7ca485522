@@ -1,0 +1,26 @@
+package kosa.video;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class VideoManager {
+	private List<GeneralMember> members;
+	private List<Video> videos;
+	
+	public VideoManager() {
+		members = new ArrayList<>();
+		videos = new ArrayList<>();
+	}
+	
+	public void enrollMember() {
+		
+	}
+	
+	public void showMemberInfo() {
+		
+	}
+	
+	public void enrollVideo() {
+		
+	}
+}

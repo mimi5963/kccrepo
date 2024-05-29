@@ -1,0 +1,16 @@
+package kosa.relation;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Course {
+	private String name;
+	private List<Student> students;
+	
+	public Course() {}
+	public Course(String name) {
+		super();
+		this.name = name;
+		students = new ArrayList<>();
+	}
+}

@@ -1,0 +1,51 @@
+package kcc.board;
+
+import java.util.Scanner;
+
+public class BoardManager {
+	private Board[] boards;
+	private int curNum;
+
+	public BoardManager() {
+		this(10);
+	}
+
+	public BoardManager(int maxNum) {
+		boards = new Board[maxNum];
+		curNum = 0;
+	}
+
+	public boolean insertBoard() {
+		if(curNum >= boards.length) {
+			System.out.println("게시판이 꽉 차서 더 이상 넣을 수 없습니다.");
+			return false;
+		}else {
+			Scanner sc = new Scanner(System.in);
+			System.out.print("게시글 제목을 입력하세요 :");
+			String title = sc.nextLine();
+			System.out.print("게시글 작성자를 입력하세요 :");
+			String name = sc.nextLine();
+			System.out.print("내용을 입력하세요 :");
+			String content = sc.nextLine();
+			
+			this.boards[curNum++] = new Board(title,name,content);
+			
+		}
+	}
+
+	public boolean updateBoard(int boardNum) {
+
+	}
+
+	public boolean deleteBoard(int boardNum) {
+
+	}
+
+	public void printBoard(int boardNum) {
+
+	}
+
+	public void printAllBoard() {
+
+	}
+}
