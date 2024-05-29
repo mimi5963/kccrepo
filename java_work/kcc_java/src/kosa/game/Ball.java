@@ -4,28 +4,34 @@ public class Ball {
 	
 	private int num;
 	private int idx;
-	
+	private GameStatus gameStatus;
 	public Ball() {}
 	
-	public Ball(int num) {
+	public Ball(int idx,int num) {
 		this.num = num;
 		this.idx = idx;
+		gameStatus = GameStatus.NOTHING;
 	}
 	
-	public GameStatus compareBall(Ball target) {
-		if(num == target.num && idx == target.idx) {
-			return GameStatus.STRIKE;
-		}else if(num == target.num) {
-			return GameStatus.BALL;
+	public void compareBall(Ball target) {
+		if(gameStatus == GameStatus.NOTHING) {
+			if (isSameBallNumber(target) && isSameBallIdx(target)) {
+				gameStatus = GameStatus.STRIKE;
+			} else if (isSameBallNumber(target) ) {
+				gameStatus = GameStatus.BALL;
+			}
 		}
-		return GameStatus.NOTTHING;
 	}
 	
 	
-	public boolean isSameBall(Ball target) {
+	public boolean isSameBallNumber(Ball target) {
 		return num == target.num;
 	}
-	
+	public boolean isSameBallIdx(Ball target) {return idx == target.idx;}
+
+	public GameStatus getGameStatus(){
+		return this.gameStatus;
+	}
 	
 	
 }
