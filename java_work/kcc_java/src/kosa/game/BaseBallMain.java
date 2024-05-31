@@ -19,7 +19,7 @@ public class BaseBallMain {
            cnt++;
         }
         System.out.println("3Strike");
-        System.out.println(cnt+"ë²ˆì§¸ ì„±ê³µ");
+        System.out.println(cnt+"¹øÂ° ¼º°øÇÏ¼Ì½À´Ï´Ù.");
 
     }
 }

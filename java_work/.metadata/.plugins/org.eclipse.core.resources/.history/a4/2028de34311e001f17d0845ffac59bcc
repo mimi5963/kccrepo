@@ -1,0 +1,26 @@
+package kcc.cafe;
+
+public class Customer {
+	private String name;
+	private Coupon coupon;
+	
+	
+	public Customer() {}
+	public Customer(String name) {
+		this.name = name;
+		this.coupon = createCoupone();
+	}
+	
+	//·£´ı »ı¼º 
+	public Coupon createCoupone() {
+		//ÃßÈÄ ·£´ıÀ¸·Î ¸¸µé °Í
+		return new Coupon("ÃÑÇÒÀÎÄíÆù",0.1);
+	}
+	public int setCoupone(int totalPrice) {
+		return (int)(totalPrice*coupon.getRate());
+	}
+	public String getName() {
+		// TODO Auto-generated method stub
+		return this.name;
+	}
+}

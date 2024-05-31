@@ -9,10 +9,15 @@ public class PhoneInfo {
     private static DateTimeFormatter datetimeInputFormatter;
     private static DateTimeFormatter datetimeOutputFormatter;
     private String name;
-    private final String phoneNumber;
+    private String phoneNumber;
     private LocalDate birth;
-
-    private PhoneInfo(String name, String phoneNumber, LocalDate birth) {
+    
+    public PhoneInfo() {
+    	
+    }
+    
+   
+    public PhoneInfo(String name, String phoneNumber, LocalDate birth) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.birth = birth;
@@ -42,6 +47,10 @@ public class PhoneInfo {
         return new PhoneInfo(name, phoneNumber, LocalDate.parse(formatDate, datetimeInputFormatter));
     }
 
+   
+    
+    
+    
     /*
      * 	입력받은 전화번호의 형식의 유효성을 검사한다.
      * */

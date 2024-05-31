@@ -78,4 +78,12 @@ public class VideoManager {
 		String actoer = sc.nextLine();
 		videos.add(new Video(num,title,actoer));
 	}
+	
+	public void depoistBonus() {
+		for(GeneralMember g : members) {
+			if(g instanceof SpecialMember) {
+				((SpecialMember) g).plusBonus(10);
+			}
+		}
+	}
 }

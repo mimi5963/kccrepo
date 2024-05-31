@@ -73,7 +73,13 @@ public class Manager {
     public PhoneInfo[] searchPhoneInfo(String target) {
         return findPolicy.findPhoneInfo(phoneInfoArray, curBookSize, target);
     }
-
+    
+    public void searchPhoneInfos() {
+    	System.out.println("이름 : ");
+    	//String name = sc.nextLine();
+    	int idx = -1;
+    	//for문을 count 까지 돌면서 값 찾기 idx값이 계속 -1이면, 존재하지 않는다, 찾으면 바꾼다 로직
+    }
 
     /*
      * 기준을 사용자로부터 입력받는다.

@@ -1,0 +1,17 @@
+package kosa.bank;
+
+public class MyBank {
+	private Customer[] customers;
+	private int customersNum;
+	
+	public MyBank() {
+		customers = new Customer[10];
+		customersNum =1;
+	}
+	
+	
+	public void addCustomer(String id, String name, long balance) {
+		// 회원을 만들어서 배열에 추가
+		
+	}
+}

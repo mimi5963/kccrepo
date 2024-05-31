@@ -1,0 +1,26 @@
+package kcc.cafe;
+
+public class Customer {
+	private String name;
+	private Coupon coupon;
+	
+	
+	public Customer() {}
+	public Customer(String name) {
+		this.name = name;
+		this.coupon = createCoupon();
+	}
+	
+	//랜덤 생성 
+	private Coupon createCoupon() {
+		//추후 랜덤으로 만들 것
+		return new Coupon("총할인쿠폰",0.1);
+	}
+	public int setCoupone(int totalPrice) {
+		return (int)(totalPrice*coupon.getRate());
+	}
+	public String getName() {
+		// TODO Auto-generated method stub
+		return this.name;
+	}
+}

@@ -10,6 +10,18 @@ public class VideoMain {
 		Video v1 = new Video(1,"트랜스포머3","서봉수");
 		m1.lentalVide(v1);
 		m1.printLentalVideoInfo();
+		
+		//Gen 멤버와 SpecialMember 함께 배열에 넣고 
+		
+		//각가의 
+		GeneralMember[] members = {new SpecialMember("3","짱","사"),new GeneralMember("2","원","강"),new SpecialMember("1", "장", "홍제")};
+		for(GeneralMember g : members) {
+			g.lentalVide(new Video(1,"트렌스포머3","서봉수"));
+		}
+		
+		for(GeneralMember g1 : members) {
+			g1.printLentalVideoInfo();
+		}
 //		Scanner sc = new Scanner(System.in);
 //		VideoManager vm = new VideoManager();
 //		while(true) {

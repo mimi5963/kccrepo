@@ -49,7 +49,7 @@ public class BaseBallGameManager {
 
 
 		while (true) {
-			System.out.println("ë³¼ì„ ì…ë ¥í•´ ì£¼ì„¸ìš”");
+			System.out.println("»ç¿ëÇÏ°íÀÚ ÇÏ½Ã´Â º¼À» ÀÔ·ÂÇØÁÖ¼¼¿ä");
 			String sinput = sc.nextLine();
 			boolean flag = true;
 
@@ -59,7 +59,7 @@ public class BaseBallGameManager {
 			}
 
 			if (!flag){
-				System.out.println("ì¤‘ë³µëœ ìˆ«ìëŠ” ì…ë ¥í•˜ì‹¤ ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”");
+				System.out.println("Áßº¹µÈ °ªÀº ÀÔ·ÂÇÏ½Ç ¼ö ¾ø½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä");
 				userBalls.clearBalls();
 			}else{
 				break;

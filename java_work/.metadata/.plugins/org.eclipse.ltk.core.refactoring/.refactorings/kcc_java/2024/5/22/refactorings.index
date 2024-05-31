@@ -7,3 +7,9 @@
 1716940700757	Rename package 'Mission_NumberBook.findPolicy'
 1716940737054	Rename package 'Mission_NumberBook'
 1716967873601	Rename type 'videoMain'
+1717034733605	Rename type 'Kiosk'
+1717038264884	Rename method 'setCoupone'
+1717038275706	Rename method 'useCoupone'
+1717045557142	Delete element
+1717047942014	Rename type 'testHiHi'
+1717121716470	Rename type 'SpecialMAmber'

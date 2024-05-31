@@ -1,0 +1,5 @@
+package kosa.bank;
+
+public class Account {
+
+}

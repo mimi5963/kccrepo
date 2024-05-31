@@ -1,0 +1,6 @@
+package kosa.bank;
+
+public class Account {
+	private String id;
+	private long balance;
+}

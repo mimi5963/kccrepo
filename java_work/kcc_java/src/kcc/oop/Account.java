@@ -4,16 +4,20 @@ public class Account {
 	
 	//按眉 积己阑 困秦 ! 
 	
-	String accountNo;
-	String ownerName;
-	int balance;
+	private String accountNo;
+	private String ownerName;
+	private int balance;
 	
 	//积己磊 
 	public Account() {
 		
 	}
 	
-	
+	public Account(String accountNo, String ownerName, int balance) {
+		this.accountNo = accountNo;
+		this.ownerName = ownerName;
+		this.balance = balance;
+	}
 	
 	@Override
 	public int hashCode() {
@@ -67,5 +71,13 @@ public class Account {
 		return amount;
 	} 
 	
+	public int getBalance() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	public void setBalnace(int amount) {
+	 this.balance = amount;
+	}
 
 }

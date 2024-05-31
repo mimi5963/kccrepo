@@ -1,0 +1,14 @@
+package kcc.oop;
+
+public class CheckingAccount extends Account {
+	private String cardNo;
+	
+	public int pay(String cardNo, int amount) {
+		if(!this.cardNo.equals(cardNo) || getBalance() < amount) {
+			
+		}
+		return 0;
+	}
+
+	
+}

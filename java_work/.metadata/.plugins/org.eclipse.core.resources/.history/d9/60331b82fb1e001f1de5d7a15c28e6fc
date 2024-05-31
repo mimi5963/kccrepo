@@ -1,0 +1,16 @@
+package kcc.oop;
+
+public class MinusAccount extends Account{
+	private int creditLine;
+	
+	public MinusAccount() {
+		
+	}
+	public MinusAccount(String accountNo, String ownerName, int balance, int creditLine) {
+		super(accountNo, ownerName, balance);
+		this.creditLine = creditLine;
+	}
+	
+	
+
+}
