@@ -1,8 +1,0 @@
-package kosa.realSoft;
-
-import java.util.List;
-
-public interface BankStatementParser {
-	BankTransaction parseFrom(String line);
-	Listst<BankTransaction> parseLinesFron(List<String>lines);
-}

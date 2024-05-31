@@ -1,0 +1,7 @@
+package resturant;
+
+import java.util.Scanner;
+
+public class KeyBoardInput {
+	private static Scanner sc = new Scanner(System.in);
+}
