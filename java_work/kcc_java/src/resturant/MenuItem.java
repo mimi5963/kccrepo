@@ -1,16 +1,18 @@
 package resturant;
 
-public class MenuItem {
+ public class MenuItem {
 	private String name;
 	private int price;
 	private String description;
-	
-	
+
+	public MenuItem(){}
+
 	public MenuItem(String name, int price, String description) {
 		this.name = name;
 		this.price = price;
 		this.description = description;
 	}
+
 
 	public int calcPrice() {
 		return price;
@@ -36,7 +38,6 @@ public class MenuItem {
 		return description;
 	}
 
-	
 	
 	
 }
