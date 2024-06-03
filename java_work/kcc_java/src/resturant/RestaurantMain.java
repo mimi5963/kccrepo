@@ -11,6 +11,7 @@ public class RestaurantMain {
             String input =KeyBoardInput.sc.nextLine();
             switch (input){
                 case "1":
+                    System.out.println("d");
                 case "2":
                 case "3": return;
             }
