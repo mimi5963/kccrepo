@@ -13,6 +13,7 @@ public class RestaurantMain {
                 case "1":
                     System.out.println("d");
                 case "2":
+                    System.out.println("d");
                 case "3": return;
             }
         }
