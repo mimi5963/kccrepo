@@ -1,0 +1,12 @@
+package kcc.inter;
+
+public class Reader extends Man implements Speakable {
+
+	@Override
+	public String speak() {
+		
+		return super.getName()+"자바 화이팅";
+	}
+	
+	
+}

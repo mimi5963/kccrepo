@@ -1,0 +1,18 @@
+package kcc.oop3;
+
+interface A1{
+	B abc();
+}
+
+class B1{
+	B1(){
+		System.out.println();
+	}
+}
+
+public class Main3 {
+	public static void main(String[] args) {
+		A1 a = B::new;
+		B1 b = a.abc();
+	}
+}

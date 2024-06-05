@@ -1,0 +1,27 @@
+package kosa.api;
+
+public class Main {
+	public static void main(String[] args) {
+			Person p1 = new Person("홍길동",20);
+			Person p2 = new Person("홍길동",20);
+			
+			if(p1 == p2) {
+				System.out.println("같다");
+			}else {
+				System.out.println("다르다");
+			}
+			
+			
+			String s = "abc";
+			String s2 ="abc";
+			String s3 = new String("abc");
+			String s4 = new String("abc");
+			
+			if(s3==s4) {
+				System.out.println("같다");
+			}else {
+				System.out.println("다르다");
+			}
+			
+	}
+}

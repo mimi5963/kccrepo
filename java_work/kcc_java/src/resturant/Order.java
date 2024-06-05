@@ -110,6 +110,7 @@ public class Order {
 				return;
 			}
 		}
+		
 		System.out.println("해당 이름의 메뉴는 없습니다.");
 		return;
 	}

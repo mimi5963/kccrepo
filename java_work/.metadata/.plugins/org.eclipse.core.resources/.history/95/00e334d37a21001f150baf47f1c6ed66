@@ -1,0 +1,13 @@
+package kcc.oop3;
+
+public class Main2 {
+	interface A{
+		void abc();
+	}
+	class B{
+		void bcd() {
+			System.out.println("메서드 호출");
+		}
+	}
+
+}

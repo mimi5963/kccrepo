@@ -1,6 +1,10 @@
 package missionPhoneBook;
 
 
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
 import mssionPhoneBook.findPolicy.FindPolicy;
 import mssionPhoneBook.findPolicy.NameFindPolicy;
 import mssionPhoneBook.findPolicy.PhoneNumberFindPolicy;
@@ -10,27 +14,25 @@ import mssionPhoneBook.findPolicy.PhoneNumberFindPolicy;
  * */
 public class Manager {
 
-    private PhoneInfo[] phoneInfoArray;
-    private int curBookSize;
-    private int maxBookSize;
+    //private PhoneInfo[] phoneInfoArray;
+    private List<PhoneInfo> phoneInfoList;
+//	private int curBookSize;
+//    private int maxBookSize;
     private FindPolicy findPolicy;
 
 
     /*
      * 사용자가 따로 입력하지않는다면, 10개의 size로 배열을 생성한다.
      * */
-    public Manager() {
-        this(10);
-    }
-
+   
 
     /*
      * 사용자가 배열의 크기를 정할 수 있다.
      * */
-    public Manager(int size) {
-        phoneInfoArray = new PhoneInfo[size];
-        curBookSize = 0;
-        maxBookSize = size;
+    public Manager() {
+        phoneInfoList = new LinkedList<PhoneInfo>();
+//        curBookSize = 0;
+//        maxBookSize = size;
     }
 
     /*
@@ -39,12 +41,10 @@ public class Manager {
      *
      * */
     public boolean addPhoneInfo(PhoneInfo phoneInfo) {
-        if (maxBookSize <= curBookSize) {
+        if (this.phoneInfoList == null) {
             return false;
-        } else {
-
-            phoneInfoArray[curBookSize++] = phoneInfo;
-        }
+        } 
+        this.phoneInfoList.add(phoneInfo);
         return true;
     }
 
@@ -55,14 +55,22 @@ public class Manager {
      *
      * */
     public boolean listPhoneInfo() {
-        if (curBookSize == 0) {
+        if (this.phoneInfoList.size() == 0) {
             return false;
         }
 
-        for (int i = 0; i < curBookSize; i++) {
-            phoneInfoArray[i].printPhoneInfo();
-            System.out.println();
+//        for (int i = 0; i < curBookSize; i++) {
+//            phoneInfoArray[i].printPhoneInfo();
+//            System.out.println();
+//        }
+        Iterator<PhoneInfo> iter = this.phoneInfoList.iterator();
+        while(iter.hasNext()) {
+        	iter.next().printPhoneInfo();
         }
+//        for(PhoneInfo p : this.phoneInfoList) {
+//        	p.printPhoneInfo();
+//        	System.out.println();
+//        }
 
         return true;
     }
@@ -70,8 +78,8 @@ public class Manager {
     /*
      * 등록된 기준에 맞게 사용자를 찾는다.
      * */
-    public PhoneInfo[] searchPhoneInfo(String target) {
-        return findPolicy.findPhoneInfo(phoneInfoArray, curBookSize, target);
+    public List<PhoneInfo> searchPhoneInfo(String target) {
+        return findPolicy.findPhoneInfo(phoneInfoList, target);
     }
     
     public void searchPhoneInfos() {

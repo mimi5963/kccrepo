@@ -1,0 +1,22 @@
+package kosa.data;
+
+public class ListExam {
+	public static void main(String[] args) {
+			//1!45 중복되지 않은 로또번호 6개 출력 
+		
+		//1번 배열로 
+		int[] arr = new int[6];
+		arr[0] = (int)(Math.random()*45)+1;
+		int idx=1;
+		for(int i=1; i<arr.length;i++) {
+			int randNum = (int)(Math.random()*45)+1;
+			for(int j=0; j<idx;j++) {
+				if(arr[j] != randNum) {
+					arr[idx++]=randNum;
+				}
+			}
+		}
+		
+		System.out.println(Arrays.toString(arr));
+	}
+}

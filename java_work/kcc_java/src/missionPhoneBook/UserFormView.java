@@ -144,7 +144,7 @@ public class UserFormView {
 
                 System.out.println(">" + findMenu[findOption - 1] + "을 입력해 주세요:");
                 String findSource = DataInput.sc.nextLine();
-                PhoneInfo[] findInfo = manager.searchPhoneInfo(findSource);
+                PhoneInfo[] findInfo = (PhoneInfo[])manager.searchPhoneInfo(findSource).stream().toArray();
 
                 if(findInfo == null) {
                 	System.out.println("존재하지 않습니다.");

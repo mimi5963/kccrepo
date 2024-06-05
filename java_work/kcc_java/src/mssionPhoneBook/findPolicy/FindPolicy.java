@@ -1,6 +1,9 @@
 package mssionPhoneBook.findPolicy;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import missionPhoneBook.PhoneInfo;
 
 /*
@@ -12,12 +15,18 @@ import missionPhoneBook.PhoneInfo;
 abstract public class FindPolicy {
 
 
-    public final PhoneInfo[] findPhoneInfo(PhoneInfo[] phoneInfoArray, int cursize, String target) {
-        PhoneInfo[] temp = new PhoneInfo[cursize];
-        for (int i = 0; i <= cursize; i++) {
-            if (phoneInfoArray[i] != null && compare(phoneInfoArray[i], target)) {
-                temp[i] = phoneInfoArray[i];
-            }
+    public final List<PhoneInfo> findPhoneInfo(List<PhoneInfo> phoneInfoArray, String target) {
+        List<PhoneInfo> temp = new ArrayList<>();
+//        for (int i = 0; i <= cursize; i++) {
+//            if (phoneInfoArray[i] != null && compare(phoneInfoArray[i], target)) {
+//                temp[i] = phoneInfoArray[i];
+//            }
+//        }
+        
+        for(PhoneInfo p : phoneInfoArray) {
+        	if(compare(p,target)) {
+        		temp.add(p);
+        	}
         }
 
         return temp;

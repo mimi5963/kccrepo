@@ -1,0 +1,22 @@
+package kcc.oop2;
+
+public class MyService {
+	private OracleDao dao;
+	private MySQLdao mysqlDao;
+	public MyService() {}
+	
+	public MyService(OracleDao dao) {
+		this.dao = dao;
+	}
+	public MyService(MySQLdao dao) {
+		this.mysqlDao = dao;
+	}
+	
+	public void insertSErvice() {
+		mysqlDao.insert();
+	}
+	
+	public OracleDao getDao() {
+		return this.dao;
+	}
+}

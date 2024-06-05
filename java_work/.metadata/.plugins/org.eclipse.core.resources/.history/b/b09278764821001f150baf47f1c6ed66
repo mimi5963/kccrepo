@@ -1,0 +1,7 @@
+package kcc.oop2;
+
+public class MySQLdao {
+	public void insert() {
+		System.out.println("MySQLDao insert »£√‚");
+	}
+}

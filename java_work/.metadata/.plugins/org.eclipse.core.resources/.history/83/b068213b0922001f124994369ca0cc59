@@ -1,0 +1,5 @@
+package kosa.api;
+
+public class Person {
+
+}

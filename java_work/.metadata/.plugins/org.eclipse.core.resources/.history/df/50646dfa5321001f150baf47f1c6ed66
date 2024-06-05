@@ -1,0 +1,6 @@
+package kcc.inter;
+
+public class Reader extends Man implements Speakable {
+	
+	
+}

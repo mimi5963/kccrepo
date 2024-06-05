@@ -1,5 +1,0 @@
-package Mission_NumberBook;
-
-public interface FindPolicy {
-
-}

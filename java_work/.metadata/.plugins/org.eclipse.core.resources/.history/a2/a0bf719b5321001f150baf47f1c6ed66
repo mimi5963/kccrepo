@@ -1,0 +1,5 @@
+package kcc.inter;
+
+public interface Speakable {
+
+}

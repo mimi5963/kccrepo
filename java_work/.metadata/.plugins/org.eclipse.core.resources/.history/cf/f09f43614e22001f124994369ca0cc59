@@ -1,0 +1,60 @@
+package kosa.api;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Scanner;
+import java.util.Date;
+public class RegularExam {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+//		System.out.print("ÀÔ·Â : ");
+//		String str = sc.nextLine();
+		
+		//abc¹®ÀÚ¸¦ Æ÷ÇÔ ¿©ºÎ Ã¼Å© : [abc]
+		
+//		if(str.matches(".*abc.*")) {
+//			System.out.println("¸ÅÄª");
+//		}else System.out.println("¸ÅÄª¾È´ï");
+//		
+		
+		//¼ýÀÚ¸¸ 3ÀÚ¸® 
+//		if(str.matches("\\d{3}")) {
+//			System.out.println("¸ÅÄª");
+//		}else System.out.println("¸ÅÄª¾È´ï");
+		
+//		if(str.matches("\\w{5,}")) {
+//			System.out.println("¸ÅÄª");
+//		}else System.out.println("¸ÅÄª¾È´ï");
+		
+//		if(str.matches("[°¡-ÆR]{3,5}")) {
+//			System.out.println("¸ÅÄª");
+//		}else System.out.println("¸ÅÄª¾È´ï");
+//		
+		//dolsam77@nate.com
+//		
+//		if(str.matches("^[a-zA-Z][\\w]+@[a-z]*\\.(com||net)$")) {
+//			System.out.println("¸ÅÄª");
+//		}else System.out.println("¸ÅÄª¾È´ï");
+		
+		//Å°º¸µå·Î ³¯Â¥ ÀÔ·Â ¹Þ±â 
+		String sinput = sc.nextLine();
+		//ÀÔ»çÀÏ ÀÔ·Â ¹Þ¾Æ => ¸î³â ¸î°³¿ù ÀçÁ÷ 
+		SimpleDateFormat sf = new SimpleDateFormat("yyy/mm/dd");
+		
+		try {
+			Date past = sf.parse(sinput);
+			Date now = new Date();
+			Date diff = new Date(now.getTime()-past.getTime());
+			
+			System.out.println(diff.getYear()+"³â"+diff.getMonth()+"¿ù ÀçÁ÷Áß");
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+}

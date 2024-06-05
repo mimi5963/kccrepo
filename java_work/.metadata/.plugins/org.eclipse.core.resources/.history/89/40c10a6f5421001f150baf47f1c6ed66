@@ -1,0 +1,11 @@
+package kcc.inter;
+
+public class Work extends Man implements Speakable{
+
+	@Override
+	public String speak() {
+		
+		return super.getName()+"열심히 일해야 한다.";
+	}
+
+}

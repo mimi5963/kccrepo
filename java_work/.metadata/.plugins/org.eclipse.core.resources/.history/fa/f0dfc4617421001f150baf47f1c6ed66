@@ -1,0 +1,12 @@
+package kcc.oop3;
+
+public class Main {
+	public static void main(String[] args) {
+		Person p1 = new Person("³ª³ª",new Work());
+		p1.personDoing();
+		p1.setNewRole(new Student());
+		p1.personDoing();
+		
+		MyType m = (x) -> {Integer.parseInt(x);};
+	}
+}
