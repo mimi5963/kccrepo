@@ -1,0 +1,28 @@
+package kosa.queueMisson;
+
+import java.util.List;
+
+public class Order {
+	private List<Menu> menuList;
+	private boolean isFastOrder;
+	private int orderNumber;
+	private int fastOrderExtraPrice;
+	public Order(List<Menu> menuList, int orderNumber) {
+		this.menuList = menuList;
+		this.orderNumber = orderNumber;
+	}
+	
+	public void setFastOrder(boolean isFast) {
+		this.isFastOrder = true;
+		setExtraPrice(10);
+	}
+	private void setExtraPrice(int price) {
+		this.fastOrderExtraPrice = price;
+	}
+	
+	public void addMenuToMenuList(Menu menu) {
+		menuList.add(menu);
+	}
+	
+	
+}

@@ -1,6 +1,7 @@
 package missionPhoneBook;
 
 
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -107,5 +108,31 @@ public class Manager {
 
         return true;
     }
+
+	public void sortByName() {
+		Collections.sort(this.phoneInfoList);
+		
+	}
+
+	public void sortByPhoneNumber() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void sortByAsc(SortGroup g, SortContent gc) {
+		if(g == SortGroup.COMPANY) {
+			//이러지 말았어야해~~ 
+		}else if(g == SortGroup.TOTAL) {
+			
+		}else if(g == SortGroup.UNIVERSE) {
+			
+		}
+		
+	}
+
+	public void sortByDesc(SortGroup g, SortContent gc) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

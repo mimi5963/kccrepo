@@ -1,0 +1,33 @@
+package kosa.sortexams;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Main {
+	public static void main(String[] args) {
+		Person p = new Person(90,"박길동");
+		Person p1 = new Person(90,"김길동");
+		Person p2 = new Person(90,"홍길동");
+		Person p3 = new Person(90,"최길동");
+		Person p4 = new Person(90,"장길동");
+		
+		List<Person> lists = new ArrayList<>();
+	
+		lists.add(p);
+		lists.add(p1);
+		lists.add(p2);
+		lists.add(p3);
+		lists.add(p4);
+		
+		
+		Collections.sort(lists, (o1,o2) -> {
+		 Person o =	(Person)o1;
+		 Person ok = (Person)o2;
+		 return o.getName().compareTo(ok.getName());
+		});
+		
+		System.out.println(lists.toString());
+		
+	}
+}

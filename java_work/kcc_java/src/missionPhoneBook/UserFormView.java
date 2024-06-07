@@ -1,14 +1,17 @@
 package missionPhoneBook;
 
 import java.time.DateTimeException;
+import java.util.Collections;
 import java.util.Scanner;
 
 import javax.xml.crypto.Data;
 
+import kosa.queueMisson.KeyBoardInput;
+
 /*
  *  사용자 입력을 받을 수 있는 뷰와 입력에 따른 처리 결과를 알려주는 클래스이다.
  * */
-public class UserFormView {
+public class UserFormView{
 
     private Manager manager;
     private final String FAILMESSAGE = "> 전화번호 등록에 실패 했습니다 :";
@@ -177,6 +180,33 @@ public class UserFormView {
 
 	public void deletePhoneInfo() {
 		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void sort() {
+		//템플릿 멕호드?
+		System.out.println("정렬할 그룹을 선택해주세요");
+		System.out.print("1. 전체, 2. 회사, 3. 대학");
+		String ip = KeyBoardInput.sc.nextLine();
+		SortGroup g = SortGroup.getSortGroup(ip);
+		System.out.println("정렬 기준을 선택해주세요");
+		System.out.print("1. 이름순, 2. 전화번호 순 :" );
+		String input = KeyBoardInput.sc.nextLine();
+		SortContent gc = SortContent.getContent(input);
+		System.out.print("1. 오름차순 2. 내림차순");
+		String input2 = KeyBoardInput.sc.nextLine();
+		
+		
+		
+		switch(input2) {
+		case "1":
+			manager.sortByAsc(g,gc);
+			break;
+		case "2":
+			manager.sortByDesc(g,gc);
+		}
+		
 		
 	}
 }

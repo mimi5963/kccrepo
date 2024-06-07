@@ -36,15 +36,19 @@ public class PhoneBookMain {
                         break;
                     case 4:
                     	System.out.println(">메뉴 4");
-                    	//userFormView.updatePhoneInfo();
+                    	userFormView.updatePhoneInfo();
                     	break;
                     case 5:
                     	System.out.println(">메뉴 5");
-                    	//userFormView.deletePhoneInfo();
+                    	userFormView.deletePhoneInfo();
                     	break;
                     case 6:	
                     	 System.out.println(">메뉴 6");
-                         System.out.println(">프로그램을 종료합니다.");
+                    	 userFormView.sort();
+                         
+                    case 7:
+                    	System.out.println(">메뉴7");
+                    	 System.out.println(">프로그램을 종료합니다.");
                          return;
                     default:
                         System.out.println("메뉴에 있는 기능만 선택 가능합니다.");
@@ -69,7 +73,7 @@ public class PhoneBookMain {
     private static String[] preprocess() {
         userFormView = new UserFormView(new Manager());
         
-        return new String[]{"추가", "전체출력", "검색","수정","삭제", "종료"};
+        return new String[]{"추가", "전체출력", "검색","수정","삭제","정렬","종료"};
     }
 
 

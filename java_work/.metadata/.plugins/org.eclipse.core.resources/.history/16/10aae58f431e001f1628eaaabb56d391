@@ -1,6 +1,0 @@
-package kosa.bank;
-
-public class MyBank {
-	private Customer[] customers;
-	private int customersNum;
-}

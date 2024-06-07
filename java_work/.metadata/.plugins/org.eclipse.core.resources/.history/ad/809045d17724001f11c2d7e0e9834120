@@ -1,0 +1,18 @@
+package kosa.queueMisson;
+
+public class Food {
+	private final String foodName;
+	private final int price;
+	public Food(String name, int price ) {
+		this.foodName = name;
+		this.price = price;
+	}
+	
+	public String getName() {
+		return foodName;
+	}
+	
+	public int getPrice() {
+		return this.price;
+	}
+}

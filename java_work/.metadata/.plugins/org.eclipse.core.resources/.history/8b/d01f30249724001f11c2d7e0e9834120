@@ -1,0 +1,9 @@
+package missionPhoneBook;
+
+public enum SortGroup {
+	TOTAL("1"),COMPANY("2"),UNIVERSE("3");
+	private String ordinal;
+	private SortGroup(String n) {
+		this.ordinal = n;
+	}
+}

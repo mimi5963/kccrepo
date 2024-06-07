@@ -1,0 +1,23 @@
+package missionPhoneBook;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public enum SortGroup {
+	TOTAL("1"),COMPANY("2"),UNIVERSE("3");
+	private String ordinal;
+	private static Map<String, SortGroup> map;
+	private SortGroup(String n) {
+		this.ordinal = n;
+		
+		
+	}
+	static {
+		map = new HashMap<String, SortGroup>();
+		map.put("1", SortGroup.TOTAL);
+		map.put("2",SortGroup.COMPANY);
+		map.put("3",SortGroup.UNIVERSE);
+	}
+	
+	
+}

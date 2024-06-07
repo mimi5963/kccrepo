@@ -1,0 +1,5 @@
+package missionPhoneBook;
+
+public enum SortContent {
+
+}

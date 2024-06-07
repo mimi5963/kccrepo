@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 
-public class PhoneInfo {
+public class PhoneInfo implements Comparable<PhoneInfo>{
     private static DateTimeFormatter datetimeInputFormatter;
     private static DateTimeFormatter datetimeOutputFormatter;
     private String name;
@@ -104,5 +104,12 @@ public class PhoneInfo {
     public LocalDate getBirth() {
         return birth;
     }
+
+
+	@Override
+	public int compareTo(PhoneInfo o) {
+		
+		return this.name.compareTo(o.name);
+	}
 
 }

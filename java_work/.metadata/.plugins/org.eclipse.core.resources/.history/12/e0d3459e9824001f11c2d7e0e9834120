@@ -1,0 +1,15 @@
+package missionPhoneBook;
+
+public enum SortContent {
+	NAME("1"),PHONENUMBER("2");
+	
+	private String name;
+	private SortContent(String input) {
+		this.name = name;
+	}
+
+	public static SortContent getContent(String input) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

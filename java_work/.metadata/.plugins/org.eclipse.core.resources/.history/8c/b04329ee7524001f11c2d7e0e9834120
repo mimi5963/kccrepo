@@ -1,0 +1,23 @@
+package kosa.queueMisson;
+
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class OrderManager {
+	private Deque<Order> orderQueue;
+	
+	public OrderManager() {
+		this.orderQueue = new LinkedList<>();
+	}
+	
+	public void addOrder(Order order) {
+		if(order.getIsFastOrder()) {
+			orderQueue.addFirst(order);
+			return;
+		}
+		orderQueue.addLast(order);
+	}
+	
+	public void 
+}

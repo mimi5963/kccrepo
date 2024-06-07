@@ -1,5 +1,0 @@
-package missionPhoneBook;
-
-public class Company extends PhoneInfo{
-
-}
