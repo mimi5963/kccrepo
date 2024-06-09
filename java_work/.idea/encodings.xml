@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/kcc_java/src/Mission_NumberBook/Manager.java" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/kcc_java/src/Mission_NumberBook/PhoneBookMain.java" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/kcc_java/src/Mission_NumberBook/PhoneInfo.java" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/kcc_java/src/Mission_NumberBook/UserFormView.java" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/kcc_java/src/Mission_NumberBook/findPolicy/FindPolicy.java" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/kcc_java/src/Mission_NumberBook/findPolicy/NameFindPolicy.java" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/kcc_java/src/Mission_NumberBook/findPolicy/PhoneNumberFindPolicy.java" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/kcc_java/src/kosa/mission/ArrayMission.java" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/kcc_java/src/kosa/mission2/Mission2_2.java" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/kcc_java/src/resturant/Order.java" charset="x-windows-949" />
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/kcc_java/src/kcc/cafe/Customer.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kcc_java/src/kcc/cafe/Kiosk_Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kcc_java/src/kcc/cafe/Order.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kcc_java/src/kosa/mission/ArrayMission.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kcc_java/src/kosa/mission2/Mission2_2.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kcc_java/src/mssionPhoneBook/findPolicy/FindPolicy.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kcc_java/src/resturant/Order.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
