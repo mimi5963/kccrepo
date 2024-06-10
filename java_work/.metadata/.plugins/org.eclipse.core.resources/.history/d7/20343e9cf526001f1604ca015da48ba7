@@ -1,0 +1,10 @@
+package kosa.IO;
+
+public class KosaReader {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

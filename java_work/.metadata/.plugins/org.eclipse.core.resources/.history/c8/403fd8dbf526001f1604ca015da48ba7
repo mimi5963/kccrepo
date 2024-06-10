@@ -1,0 +1,34 @@
+package kosa.IO;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class KosaReader {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			
+		//poem.txt에 있는 문자열을 읽어오고싶어용
+		FileReader fr = null;
+		try {
+			 fr = new FileReader("poem.txt");
+			
+			
+			
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			try {
+				fr.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+	}
+
+}

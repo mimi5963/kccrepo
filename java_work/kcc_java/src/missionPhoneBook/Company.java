@@ -25,6 +25,10 @@ public class Company extends PhoneInfo{
 		System.out.println("position: "+position);
 	}
 	
+	public String getPosition() {
+		return this.position;
+	}
+	
 	
 	
 	

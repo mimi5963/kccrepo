@@ -6,18 +6,21 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-//미리 추가된 방식으로만 사용하도록 map에 저장함
+//誘몃━ 異붽��맂 諛⑹떇�쑝濡쒕쭔 �궗�슜�븯�룄濡� map�뿉 ���옣�븿
 
-abstract public class ProductSort {
-    public final static Map<Integer,ProductSort> productSortMap;
-    static {
-        productSortMap = new HashMap<>();
-        productSortMap.put(1,new ProductSortByProductName());
-        productSortMap.put(2,new ProductSortByHighestPrice());
-        productSortMap.put(3,new ProductSortByLowestPrice());
-        productSortMap.put(4,new ProductSortByProductRegistration());
+ public interface ProductSort {
+    public static Map<Integer,ProductSort> productSortMap = new HashMap<>();
+    
+    public static void initMap() {
+    	 
+   productSortMap.put(1,new ProductSortByProductName());
+   productSortMap.put(2,new ProductSortByHighestPrice());
+   productSortMap.put(3,new ProductSortByLowestPrice());
+   productSortMap.put(4,new ProductSortByProductRegistration());
+    	 
     }
-    abstract public Collection<Product> sortProduct(Collection<Product> targets);
+   
+     Collection<Product> sortProduct(Collection<Product> targets);
 
 
 }

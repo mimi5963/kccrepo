@@ -1,0 +1,36 @@
+package kosa.IO;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Copy {
+	public static void main(String[] args) {
+			
+		
+		
+		//poem2.txt
+		
+		FileReader fr=null;
+		FileWriter fw =null;
+		
+		try {
+			fr = new FileReader("poem2.txt");
+			
+			fw = new FileWriter("pome3.txt");
+			
+			
+			StringBuffer sb = new StringBuffer();
+			
+		}catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}catch (IOException e) {
+			
+		}finally {
+			fw.close();
+			fr.close();
+		}
+		
+	}
+}

@@ -17,11 +17,7 @@ abstract public class FindPolicy {
 
     public final List<PhoneInfo> findPhoneInfo(List<PhoneInfo> phoneInfoArray, String target) {
         List<PhoneInfo> temp = new ArrayList<>();
-//        for (int i = 0; i <= cursize; i++) {
-//            if (phoneInfoArray[i] != null && compare(phoneInfoArray[i], target)) {
-//                temp[i] = phoneInfoArray[i];
-//            }
-//        }
+      
         
         for(PhoneInfo p : phoneInfoArray) {
         	if(compare(p,target)) {

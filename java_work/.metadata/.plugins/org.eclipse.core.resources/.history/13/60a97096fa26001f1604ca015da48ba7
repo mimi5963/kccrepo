@@ -1,0 +1,30 @@
+package kosa.IO;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class KosaWrite {
+	public static void main(String[] args) {
+		
+		
+		//키보드로부터 문자열을 입력 받아 
+		FileWriter fw = null;
+		try {
+			 fw = new FileWriter("poem2.txt",true);
+			 
+			 fw.write("\n이것은 파일에 쓰는 것 새로쓰고있어요오오오\n");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			try {
+				fw.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		
+	}
+}

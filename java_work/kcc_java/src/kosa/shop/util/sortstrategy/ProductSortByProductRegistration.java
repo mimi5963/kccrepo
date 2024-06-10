@@ -7,8 +7,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
- class ProductSortByProductRegistration extends ProductSort {
-    @Override
+ class ProductSortByProductRegistration implements ProductSort {
     public Collection<Product> sortProduct(Collection<Product> targets) {
         Collection<Product> temp= List.copyOf(targets);
 

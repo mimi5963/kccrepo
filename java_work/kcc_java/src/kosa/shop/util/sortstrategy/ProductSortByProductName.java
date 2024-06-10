@@ -7,8 +7,8 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
- class ProductSortByProductName extends ProductSort {
-    @Override
+ class ProductSortByProductName implements ProductSort {
+    
     public Collection<Product> sortProduct(Collection<Product> targets) {
         Collection<Product> temp= new ArrayList<>(targets);
                 //List.copyOf(targets);

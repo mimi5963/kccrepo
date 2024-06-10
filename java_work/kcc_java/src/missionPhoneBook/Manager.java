@@ -2,9 +2,12 @@ package missionPhoneBook;
 
 
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 import mssionPhoneBook.findPolicy.FindPolicy;
 import mssionPhoneBook.findPolicy.NameFindPolicy;
@@ -83,6 +86,8 @@ public class Manager {
         return findPolicy.findPhoneInfo(phoneInfoList, target);
     }
     
+    
+    
     public void searchPhoneInfos() {
     	System.out.println("이름 : ");
     	//String name = sc.nextLine();
@@ -134,5 +139,33 @@ public class Manager {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	//회사 사람만 모으기 
+	public List<PhoneInfo> findUserInCompany(String name){
+		
+		
+		return phoneInfoList.stream()
+				.filter((s) -> {return s instanceof Company;})
+				.filter(s-> {return s.getName().equals(name);})
+				.collect(Collectors.toList());
+	}
+	//모든 폰인포 중에 회사의 부서별로 sort
+	public List<PhoneInfo> sortPhoneInfoByCompanyPosittion(){
+		return phoneInfoList.stream()
+				.filter(info -> info instanceof Company)
+				.sorted((o1,o2)->{return ((Company)o1).getPosition().compareTo(((Company)o2).getPosition());})
+				.collect(Collectors.toList());
+	}
+	//이름 첫 글자로 그룹만들기 가-가충순
+	public void groupByPhoneInfoFirstName() {
+		Map<String, PhoneInfo> map = phoneInfoList.stream()
+				.collect(Collectors.toMap(p -> (p.getName()).charAt(0)+"", p->p)); 
+		
+	}
+//	//이름은 겹치는데, 그룹은 다른사람들
+//	public List<PhoneInfo> findPhoneInfoBySameNameAndDifferentCategory(){
+//		this.phoneInfoList.stream().
+//		//
+//	}
 
 }

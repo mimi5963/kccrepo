@@ -51,4 +51,10 @@ public class ShopManagerTestProxy implements ShopManager {
     public void showProductByCategory() {
 
     }
+
+	@Override
+	public void savestatistics() {
+		// TODO Auto-generated method stub
+		
+	}
 }

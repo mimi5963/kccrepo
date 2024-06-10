@@ -6,7 +6,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-class ProductSortByHighestPrice extends ProductSort {
+class ProductSortByHighestPrice implements ProductSort {
 
 
     @Override
