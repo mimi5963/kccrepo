@@ -1,0 +1,20 @@
+package kosa.IO;
+
+import java.io.File;
+import java.io.IOException;
+
+public class FileCopyMain {
+	public static void main(String[] args) {
+		String source = "C://KCC/mang.jpg";
+		String dest = "C:\\KCC\\upload";
+		
+		try {
+		File sourceFile = new File(source);
+		File destFile = new File(dest);
+		CopyUtil.copyFile(sourceFile, destFile);
+		}catch(IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+}

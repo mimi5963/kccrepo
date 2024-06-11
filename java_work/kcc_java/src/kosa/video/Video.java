@@ -1,6 +1,8 @@
 package kosa.video;
 
-public class Video {
+import java.io.Serializable;
+
+public class Video implements Serializable{
 	private int videoNum;
 	private String title;
 	private String actor;
@@ -21,6 +23,10 @@ public class Video {
 	
 	public String getActor() {
 		return actor;
+	}
+	@Override
+	public String toString() {
+		return "Video [videoNum=" + videoNum + ", title=" + title + ", actor=" + actor + "]";
 	}
 	
 	

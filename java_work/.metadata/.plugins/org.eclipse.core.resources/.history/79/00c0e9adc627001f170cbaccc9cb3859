@@ -1,0 +1,75 @@
+package kosa.IO.dos;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class MiniDos implements AutoCloseable{
+	private FileInputStream fis;
+	private FileOutputStream fos;
+	private String cur;
+	private String pre;
+	
+	private MiniDos(String pwd) {
+		this.cur = pwd;
+		this.pre = pwd;
+		try {
+			fis = new FileInputStream(pwd);
+			fos = new FileOutputStream(pwd);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public boolean getUserInput(String command) {
+		
+		try {
+			
+			if(command.matches("[a-z]+")) {
+				
+				String[] commands = command.split(" ");
+				
+				if(commands[0].matches("cd.*")) {
+					
+				}else if(commands[0].matches("ls")) {
+					
+				}else if(commands[0].matches("mkdir.*")){
+					
+				}else if(commands[0].matches("cp.*")){
+					
+				}else {
+					System.out.println("존재하지 않는 명령어 입니다.");
+					return false;
+				}
+				return true;
+				
+			}else {
+				System.out.println("존재하지 않는 명령어 입니다.");
+				return false;
+			}
+			
+		}catch (IOException e) {
+			e.printStackTrace();
+			// TODO: handle exception
+		}
+		return false;
+	}
+	
+	public void printls() {
+		
+	}
+
+
+	@Override
+	public void close() throws Exception {
+		
+			fis.close();
+			fos.close();
+		
+	}
+	
+
+}

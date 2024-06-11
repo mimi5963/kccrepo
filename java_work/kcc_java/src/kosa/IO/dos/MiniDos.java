@@ -1,0 +1,90 @@
+package kosa.IO.dos;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class MiniDos implements AutoCloseable{
+	private FileInputStream fis;
+	private FileOutputStream fos;
+	private File cur;
+	private File pre;
+	
+	
+	public MiniDos(String pwd) {
+		
+		this.cur = new File(pwd);
+		this.pre = new File(pwd);
+		//fis = new FileInputStream(pwd);
+		//fos = new FileOutputStream(pwd);
+		
+	}
+	
+	public void getUserInput(String command) {
+		
+		try {
+			
+			
+				
+				String[] commands = command.split(" ");
+				
+				
+				if(command.matches("cd\\.{2}")) {
+						this.cur = this.pre;
+						
+				}else if(command.matches("cd\\s{1}[\\w]+(/[\\w]+)*")){
+						this.pre = this.cur;
+						this.cur = new File(this.cur.getPath()+File.separator+commands[1]);
+						
+				}
+				else if(command.matches("ls")) {
+					DosUtil.showAllFiles(cur);
+				}else if(command.matches("mkdir\\s{1}[\\w]+(/[\\w]+)*")){
+					System.out.println(this.cur.getPath()+File.separator+commands[1]);
+					DosUtil.mkdir(new File(this.cur.getPath()+File.separator+commands[1]));
+				}else if(commands[0].matches("cp\\s{1}[\\w]+(/[\\w]+)*")){
+					
+					//String newPath = this.cur.getcommand[1];
+					fis = new FileInputStream(this.cur);
+					fos = new FileOutputStream(new File(commands[0]));
+					
+				}else if(command.matches("vi\\s{1}[\\w]+(\\.txt)$")) {
+					
+					DosUtil.viModifiy(new File(cur,commands[1]));
+				}
+				else {
+					System.out.println("존재하지 않는 명령어 입니다.");
+					
+				}
+				
+				
+			
+		}catch (IOException e) {
+			e.printStackTrace();
+			// TODO: handle exception
+		}
+		
+	}
+	
+	public void printpwd() {
+		System.out.print(cur.getPath()+" > ");
+		
+	}
+
+	public void printls() {
+		
+	}
+
+
+	@Override
+	public void close() throws Exception {
+		
+			fis.close();
+			fos.close();
+		
+	}
+	
+
+}

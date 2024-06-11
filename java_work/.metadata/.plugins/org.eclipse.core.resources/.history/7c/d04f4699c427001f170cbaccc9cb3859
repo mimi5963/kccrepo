@@ -1,0 +1,34 @@
+package kosa.IO.dos;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class MiniDos {
+	private static FileInputStream fis;
+	private static FileOutputStream fos;
+	
+	private MiniDos() {
+		
+	}
+	
+	public static void startMiniDos() {
+		try {
+			fis = new FileInputStream("C:\\");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public static void endMiniDos() {
+		try{
+			fis.close();
+		}catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+	}
+
+}

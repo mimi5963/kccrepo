@@ -1,5 +1,6 @@
 package missionPhoneBook;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 public class Company extends PhoneInfo{

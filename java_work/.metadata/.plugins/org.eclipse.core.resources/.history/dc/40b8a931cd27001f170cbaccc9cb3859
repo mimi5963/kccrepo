@@ -1,0 +1,15 @@
+package kosa.IO.dos;
+
+public class test {
+	public static void main(String[] args) {
+			
+		
+		
+		//정규표현식 테스트
+		String test = "vi hi.txt";
+		
+		if(test.matches("vi\\s{1}[\\w](\\.txt)$")) {
+			System.out.println("매치");
+		} 
+	}
+}

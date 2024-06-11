@@ -1,11 +1,12 @@
 package missionPhoneBook;
 
+import java.io.Serializable;
 import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 
-public class PhoneInfo implements Comparable<PhoneInfo>{
+public class PhoneInfo implements Comparable<PhoneInfo>, Serializable{
     private static DateTimeFormatter datetimeInputFormatter;
     private static DateTimeFormatter datetimeOutputFormatter;
     private String name;

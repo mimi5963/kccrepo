@@ -1,0 +1,8 @@
+package kosa.IO;
+
+public class FileCopyMain {
+	public static void main(String[] args) {
+		String source = "C://KCC/mang.jpg";
+		String dest = "C:\\KCC\\upload";
+	}
+}

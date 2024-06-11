@@ -1,0 +1,17 @@
+package kosa.IO.dos;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		//ls, cd ,cd.. mkdir kosa cp/
+		
+		while(true) {
+			System.out.println("미니도스 프로그램을 시작합니다.");
+			String input = KeyboardInput.sc.nextLine();
+			if(input.equals("q")) break;
+		}
+		
+		
+	}
+}

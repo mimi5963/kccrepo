@@ -1,0 +1,16 @@
+package kosa.IO.dos;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		//ls, cd ,cd.. mkdir kosa cp/
+		
+		while(true) {
+			System.out.println("> ");
+			String input = KeyboardInput.sc.nextLine();
+		}
+		
+		
+	}
+}

@@ -209,4 +209,16 @@ public class UserFormView{
 		
 		
 	}
+
+
+	public void savePhoneInfo() {
+		manager.savePhoneInfoList();
+		
+	}
+
+
+	public void readPhoneInfo() {
+		manager.readPhoneInfoList();
+		
+	}
 }

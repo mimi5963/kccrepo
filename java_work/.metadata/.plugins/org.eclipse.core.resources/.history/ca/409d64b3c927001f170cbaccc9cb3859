@@ -1,0 +1,30 @@
+package kosa.IO.dos;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+public class DosUtil {
+	
+	
+	
+	public static void showAllFiles(File fis) {
+		
+		
+		for(File s : fis.listFiles()) {
+			if(s.isDirectory()) {
+				System.out.println("+"+s.getName());
+			}else {
+			System.out.println("*"+s.getName());
+			}
+		}
+		
+	}
+
+	public static void mkdir(File file) {
+		if(!file.exists()) file.mkdir();
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,6 +1,11 @@
 package missionPhoneBook;
 
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
@@ -167,5 +172,49 @@ public class Manager {
 //		this.phoneInfoList.stream().
 //		//
 //	}
+
+	public void savePhoneInfoList() {
+		ObjectOutputStream oos = null;
+		
+		try {
+			oos = new ObjectOutputStream(new FileOutputStream("phoneInfo.ser",true));
+			oos.writeObject(this.phoneInfoList);
+			
+		}catch(IOException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				oos.close();
+			}catch(IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+
+	public void readPhoneInfoList() {
+		ObjectInputStream ois = null;
+		try {
+			ois = new ObjectInputStream(new FileInputStream("phoneInfo.ser"));
+			List<PhoneInfo> temp = (List<PhoneInfo>)ois.readObject();
+			temp.stream().forEach(s->{
+				this.phoneInfoList.add(s);
+			});
+		
+			
+		}catch(IOException e){
+			e.printStackTrace();
+		}catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		finally {
+			try {
+				ois.close();
+			}catch (IOException e) {
+				// TODO: handle exception
+			}
+		}
+		
+	}
 
 }

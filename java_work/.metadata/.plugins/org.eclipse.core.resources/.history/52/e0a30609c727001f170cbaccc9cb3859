@@ -1,0 +1,15 @@
+package kosa.IO.dos;
+
+import java.io.File;
+import java.io.FileInputStream;
+
+public class DosUtil {
+	
+	public static void showAllFiles(File fis) {
+		
+		
+		fis.
+		
+	}
+
+}

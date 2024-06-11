@@ -1,0 +1,21 @@
+package kosa.IO;
+
+import java.io.File;
+import java.io.IOException;
+
+public class FileCopyMain {
+	public static void main(String[] args) {
+		String source = "C:\\KCC\\homeWork";
+		String dest = "C://KCC//upload/mangCopy/homeWork";
+		
+		try {
+		File sourceFile = new File(source);
+		File destFile = new File(dest);
+		CopyUtil.copyDirectory(sourceFile, destFile);
+		//CopyUtil.copyFile(sourceFile, destFile);
+		}catch(IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+}

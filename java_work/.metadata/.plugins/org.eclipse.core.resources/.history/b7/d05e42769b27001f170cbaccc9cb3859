@@ -1,0 +1,29 @@
+package kosa.IO;
+
+import java.io.File;
+
+public class FIleExam {
+	public static void main(String[] args) {
+		String path = "C:\\KCC\\workdir";
+		
+		File f = new File(path);
+		
+		if(f.isDirectory()) {
+			System.out.println(f.getName()+"폴더 임돠");
+			
+		}else {
+		
+		}
+	}
+	
+	public void filePrint(File f) {
+		if(f.isDirectory()) {
+			System.out.println("디렉토리 명 : "+f.getName());
+			for(File file : f.listFiles()) {
+				filePrint(file);
+			}
+		}else {
+			System.out.println("파일명 : "+f.getName());
+		}
+	}
+}

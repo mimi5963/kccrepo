@@ -1,0 +1,15 @@
+package kosa.IO.dos;
+
+public class test {
+	public static void main(String[] args) {
+			
+		
+		
+		//정규표현식 테스트
+		String test = "cd c:/hi/hi";
+		
+		if(test.matches("cd\\s{1}[a-zA-Z]+:(/[\\w]+)+")) {
+			System.out.println("매치");
+		} 
+	}
+}

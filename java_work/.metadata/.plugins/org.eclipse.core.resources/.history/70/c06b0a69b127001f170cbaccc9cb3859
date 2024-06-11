@@ -1,0 +1,14 @@
+package kosa.IO;
+
+import java.io.File;
+
+public class CopyUtil {
+	//바이트 값을 가진 파일 1개를 복사하는 메서드 
+	public static void copyFile(File source, File dest) {
+		//1. 바이트 스트림을 이용하여 이미지 파일을 복사해보자 
+		String source = "C://KCC/mang.jpg";
+		String dest = "C:\\KCC\\upload";
+		
+		Fi
+	}
+}

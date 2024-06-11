@@ -1,5 +1,8 @@
 package kosa.video;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
 public class VideoMain {
@@ -8,8 +11,25 @@ public class VideoMain {
 			
 		GeneralMember m1 = new GeneralMember("aaa","홍길동","동탄");
 		Video v1 = new Video(1,"트랜스포머3","서봉수");
+		
 		m1.lentalVide(v1);
 		m1.printLentalVideoInfo();
+		
+		ObjectOutputStream oos = null;
+		try {
+			oos = new ObjectOutputStream(new FileOutputStream("objectFile.ser"));
+			oos.writeObject(v1);
+		}catch (IOException e) {
+			// TODO: handle exception
+		}finally {
+			try {
+				oos.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
 		
 		//Gen 멤버와 SpecialMember 함께 배열에 넣고 
 		
