@@ -1,0 +1,21 @@
+package kosa.threads;
+
+public class TransferThread extends Thread{
+	SharedArea sharedArea;
+	
+	public TransferThread(SharedArea area){
+		sharedArea = area;
+	}
+	
+	public void run() {
+		for(int i=0; i<12; i++) {
+			synchronized (sharedArea) {
+			sharedArea.account1.withdraw(1000000);
+			System.out.println("ÀÌ¸ù·æ °èÁÂ 100¸¸¿ø ÀÎÃâ");
+			sharedArea.account2.deposit(1000000);
+			System.out.println("¼ºÃáÇâ °èÁÂ 100¸¸¿ø ÀÔ±Ý ");
+			}
+		}
+	}
+
+}

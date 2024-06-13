@@ -1,0 +1,5 @@
+package kosa.threads;
+
+public class DigitThread {
+
+}

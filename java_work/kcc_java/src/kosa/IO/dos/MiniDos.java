@@ -25,8 +25,8 @@ public class MiniDos implements AutoCloseable{
 	public void getUserInput(String command) {
 		
 		try {
-			
-			
+				
+			    command = command.replaceAll("\\s+", " ");
 				
 				String[] commands = command.split(" ");
 				

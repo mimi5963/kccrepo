@@ -1,0 +1,11 @@
+package kosa.threads;
+
+public class SmallLetters implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

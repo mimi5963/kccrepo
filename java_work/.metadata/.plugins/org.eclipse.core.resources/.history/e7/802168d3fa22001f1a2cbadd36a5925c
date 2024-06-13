@@ -1,7 +1,0 @@
-package kosa.data;
-
-import java.util.Scanner;
-
-public class KeyBoardInput {
-	private static final Scanner  sc = new Scanner(System.in);
-}

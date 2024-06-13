@@ -1,0 +1,5 @@
+package kosa.socket;
+
+public class Client {
+
+}

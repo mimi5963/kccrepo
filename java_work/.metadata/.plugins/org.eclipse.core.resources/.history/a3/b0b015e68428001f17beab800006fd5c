@@ -1,0 +1,16 @@
+package kosa.socket;
+
+public class ServerSocket {
+	public static void main(String[] args) {
+		ServerSocket serverSocket = null;
+		
+		
+		try {
+			serverSocket = new ServerSocket(9000);
+			
+			
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}
